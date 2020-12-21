@@ -1,1 +1,23 @@
-<p>dash works!</p>
+
+<div>
+    <mat-label>Enter the Paragraph</mat-label>
+    <input matInput [(ngModel)]="para">
+</div>
+
+<div class="spacer"></div>
+
+<div>
+    <mat-label>Search</mat-label>
+    <input matInput [(ngModel)]="search">
+</div>
+
+<div class="spacer"></div>
+
+<div>
+    <button mat-button   aria-label="Go" (click)="searchText()">GO</button>
+</div>
+
+<div>
+    <p>Result</p>
+    <div>{{result}}</div>
+</div>
