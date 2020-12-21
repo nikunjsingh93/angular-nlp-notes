@@ -12,22 +12,26 @@ export class DashComponent implements OnInit {
   para = 'Enter';
   search = 'Search';
   result;
-
+   model;
   constructor() { }
 
    ngOnInit() {
+     this.loadModel();
 
+  }
+
+ async loadModel() {
+
+     this.model = await qna.load();
   }
 
   async searchText() {
 
-    console.log(this.para,this.search);
-
-    let model = await qna.load();
+    console.log(this.para,'..',this.search);
 
     const passage = this.para;
     const question = this.search;
-    const answers = await model.findAnswers(question, passage);
+    const answers = await this.model.findAnswers(question, passage);
     console.log("Answer:",answers);
     this.result = answers;
 

@@ -1,7 +1,8 @@
 
 <div>
-    <mat-label>Enter the Paragraph</mat-label>
-    <input matInput [(ngModel)]="para">
+    <mat-form-field style="width: 300px;">
+        <textarea matInput [(ngModel)]="para" rows="20" cols="50" ></textarea>
+    </mat-form-field>
 </div>
 
 <div class="spacer"></div>
@@ -19,5 +20,5 @@
 
 <div>
     <p>Result</p>
-    <div>{{result}}</div>
+    <!-- <div>{{result}}</div> -->
 </div>
