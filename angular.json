@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-nlp-notes"
+    }
+  },
+  "defaultProject": "angular-nlp-notes",
+  "cli": {
+    "analytics": false
+  }
 }
